@@ -1,0 +1,54 @@
+.containerTab{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    z-index: 99;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+.bodyTab{
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.tab{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.avatar{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(209, 67, 67);
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.iconTab{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+    .bodyTab{
+        max-width: auto;
+    }
+    .tab{
+        padding-left: 4px;
+        padding-right: 4px;
+        justify-content: space-around;
+    }
+
+    
+  }

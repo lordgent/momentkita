@@ -1,0 +1,36 @@
+
+.base{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+.bodyBase{
+    margin: 0 auto;
+    max-width: 768px;
+    width: 100%;
+    padding-top: 6px;
+}
+
+.bodyMessage{
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.chatCard{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px;
+    cursor: pointer;
+}
+.bodyChat{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.textMessage{
+    color: rgb(175, 175, 175);
+    font-size: 13px;
+}
