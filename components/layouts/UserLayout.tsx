@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode,useEffect,useState } from 'react'
 import Navbar from '../navbar/Navbar'
 import styled from './UserLayout.module.css'
 import BottomTab from '../bottom-tab/BottomTab';
@@ -12,6 +12,22 @@ interface LayoutProps {
 const UserLayout = ({ children }: LayoutProps) => {
   const router = useRouter();
   const currentUrl = router.asPath;
+
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+      const storedToken = localStorage.getItem("token");
+      if (storedToken) {
+          setToken(storedToken);
+      } else {
+          router.push("/auth/login");
+      }
+  }, [router]);
+
+  if (!token) {
+      // Render nothing or a loading indicator while checking the token
+      return <p>Loading...</p>;
+  }
 
   return (
     <>
