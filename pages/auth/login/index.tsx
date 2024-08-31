@@ -38,7 +38,6 @@ const LoginPage = () => {
   
   const handleSubmit = () =>{
     dispatch(fetchLoginPost(form))
-    console.log(data);
     if(data !== null){
       route.push("/")
     }

@@ -25,7 +25,6 @@ const UserLayout = ({ children }: LayoutProps) => {
   }, [router]);
 
   if (!token) {
-      // Render nothing or a loading indicator while checking the token
       return <p>Loading...</p>;
   }
 
